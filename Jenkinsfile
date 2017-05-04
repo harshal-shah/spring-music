@@ -12,6 +12,6 @@ node
 	sh("./gradlew clean build")
 	sh("./gradlew warNoStatic warCopy zipGetVersion zipStatic")
 	sh("cp build/distributions/*.war tomcat-docker-image/")
-    stage 'Docker Image"
+    stage 'Docker Image'
 	sh("docker build -f tomcat-docker-image/Dockerfile -t ${imageTag} tomcat-docker-image")
 }
