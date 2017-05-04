@@ -5,7 +5,7 @@ FROM tomcat:8.5.4-jre8
 MAINTAINER Harshal Shah <harshal@infracloud.io>
 ENV REFRESHED_AT 2016-09-17
 
-ENV APP_FILE ../build/distributions/spring-music.war
+ENV APP_FILE spring-music.war
 ENV TERM xterm
 ENV JAVA_OPTS -Djava.security.egd=file:/dev/./urandom
 
