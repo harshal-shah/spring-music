@@ -9,13 +9,12 @@ ENV APP_FILE spring-music.war
 ENV TERM xterm
 ENV JAVA_OPTS -Djava.security.egd=file:/dev/./urandom
 
+COPY ${APP_FILE} /usr/local/tomcat/webapps/ROOT.war
 RUN apt-get update -qq \
   && apt-get install -qqy curl wget \
   && apt-get clean \
   && touch /var/log/spring-music.log \
   && chmod 666 /var/log/spring-music.log \
-  \
-  && cp $APP_FILE /usr/local/tomcat/webapps/ROOT.war \
   && mv /usr/local/tomcat/webapps/ROOT /usr/local/tomcat/webapps/_ROOT
 
 COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
