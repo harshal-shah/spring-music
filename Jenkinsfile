@@ -14,4 +14,6 @@ node
 	sh("cp build/distributions/*.war tomcat-docker-image/")
     stage 'Docker Image'
 	sh("docker build -f tomcat-docker-image/Dockerfile -t ${imageTag} tomcat-docker-image")
+    stage "Docker Image Push"
+	sh("docker push ${imageTag})
 }
