@@ -15,7 +15,7 @@ node
 	sh("./gradlew warNoStatic warCopy zipGetVersion zipStatic")
     stage 'Copy build artifacts'
 	sh("cp build/distributions/*.war tomcat-docker-image/")
-	sh("cp build/distributions/*.zip nginx-docker-image/*
+	sh("cp build/distributions/*.zip nginx-docker-image/*")
     stage 'Docker Image'
 	sh("docker build -f tomcat-docker-image/Dockerfile -t ${tomcatImageTag} tomcat-docker-image")
 	sh("docker build -f nginx-docker-image/Dockerfile -t ${nginxImageTag} nginx-docker-image")
