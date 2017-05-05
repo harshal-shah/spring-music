@@ -9,6 +9,7 @@ node
     def nginxImageTag = "${dhubUser}/${nginxApp}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
     checkout scm 
     stage 'Build Applications'
+	sh("grep 3498 src/main/webapp/assets/css/app.css")
 	sh("chmod 755 ./gradlew")
 	sh("./gradlew wrapper")
 	sh("./gradlew clean build")
