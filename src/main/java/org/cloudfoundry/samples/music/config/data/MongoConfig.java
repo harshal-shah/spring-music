@@ -23,8 +23,8 @@ public class MongoConfig {
     @Value("${mongodb.url}")
     private String mongoUrl;
 
-    @Value("${mongodb.port}")
-    private Integer mongoPort;
+    //@Value("${mongodb.port}")
+    private Integer mongoPort = 27017;
 
     @Value("${mongodb.db}")
     private String mongoDatabase;
