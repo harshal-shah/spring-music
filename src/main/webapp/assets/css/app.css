@@ -9,7 +9,7 @@
 }
 
 .navbar .container {
-    background-color: #008a00;
+    background-color: #3498DB;
     background-image: -moz-linear-gradient(top, #008a00, #006b00);
     background-image: -ms-linear-gradient(top, #008a00, #006b00);
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#008a00), to(#006b00));
